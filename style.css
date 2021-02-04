@@ -1,0 +1,150 @@
+:root {
+  --count: 5;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  border: 0.25rem solid goldenrod;
+}
+
+.container header,
+.container footer {
+  height: 5rem;
+  border: 0.25rem solid blue;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dcf4ff;
+}
+
+.container .messages {
+  height: calc(100vh - 10.5rem);
+  border: 0.25rem solid blue;
+}
+
+.container .messages li {
+  height: calc((100vh - 11rem) / var(--count));
+  border: 0.1rem solid red;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background: #eee;
+}
+
+.title {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.btn {
+  padding: 0.3rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.sort-btn {
+  border: 0.2rem solid violet;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prev-btn {
+  border: 0.2rem solid violet;
+}
+
+.next-btn {
+  border: 0.2rem solid green;
+}
+
+.container .messages li .message-area {
+  flex: 1;
+}
+
+.container .messages li .message-area p {
+  margin: 0.5rem;
+}
+
+.container .messages li .edit-area {
+  cursor: pointer;
+}
+
+.pageNumber {
+  margin-right: 1rem;
+}
+
+.message-area strong {
+  font-weight: bold;
+}
+
+.container header .mpp {
+  margin-right: 1rem;
+}
+
+.container header input {
+  width: 3rem;
+  text-align: center;
+}
+
+.container header label {
+  margin-right: 0.5rem;
+}
+
+/* Smartphones */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .title,
+  .btn,
+  .pageNumber,
+  input,
+  label,
+  .container .messages li {
+    font-size: 1rem !important;
+  }
+  .container header .mpp {
+    width: 7rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .title,
+  .btn,
+  .pageNumber,
+  input,
+  label,
+  .container .messages li {
+    font-size: 1.2rem !important;
+  }
+  .container header .mpp {
+    width: 7rem;
+  }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .title,
+  .btn,
+  .pageNumber,
+  input,
+  label,
+  .container .messages li {
+    font-size: 1.35rem !important;
+  }
+}
+
+/* Desktops and laptops */
+@media screen and (min-width: 1024px) {
+  .title,
+  .btn,
+  .pageNumber,
+  input,
+  label,
+  .container .messages li {
+    font-size: 1.5rem !important;
+  }
+}
